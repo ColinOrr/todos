@@ -55,3 +55,11 @@ Then create the database:
 ```bash
 $ rake db:create
 ```
+
+## Models
+
+```bash
+$ rails g model Todo title:string created_by:string
+$ rails g model Item name:string done:boolean todo:references
+$ rake db:migrate
+```
