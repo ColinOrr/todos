@@ -23,6 +23,22 @@ $ rails generate rspec:install
 $ mkdir spec/factories
 ```
 
+## Setup Spring and Guard for RSpec
+
+Add `spring-commands-rspec` and `guard-rspec` to the Gemfile.
+
+```bash
+$ bundle install
+$ bundle exec spring binstub rspec
+$ bundle exec guard init rspec
+```
+
+Edit the `Guardfile` to use `bin/rspec` as the command. 
+
+```bash
+$ bundle exec guard
+```
+
 Configure `spec/rails_helper.rb` to work with Shoulda, FactoryBot and DatabaseCleaner.
 
 ## Setup Postgres
