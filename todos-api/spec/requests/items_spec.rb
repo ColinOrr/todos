@@ -68,6 +68,10 @@ RSpec.describe 'Items API' do
     context 'when request attributes are valid' do
       before { post "/todos/#{todo_id}/items", params: valid_attributes }
 
+      it 'returns the item' do
+        expect(json['name']).to match(/Narnia/)
+      end
+
       it 'returns status code 201' do
         expect(response).to have_http_status(201)
       end
