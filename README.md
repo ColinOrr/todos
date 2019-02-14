@@ -63,3 +63,23 @@ $ rails g model Todo title:string created_by:string
 $ rails g model Item name:string done:boolean todo:references
 $ rake db:migrate
 ```
+
+## Controllers
+
+```bash
+$ rails g controller Todos
+$ rails g controller Items
+```
+
+## Testing
+
+```bash
+# GET /todos
+$ http :3000/todos
+# POST /todos
+$ http POST :3000/todos title=Colin created_by=1
+# PUT /todos/:id
+$ http PUT :3000/todos/1 title=ColinTheGeek
+# DELETE /todos/:id
+$ http DELETE :3000/todos/1
+```
