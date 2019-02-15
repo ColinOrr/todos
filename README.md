@@ -71,6 +71,8 @@ $ rails db:test:prepare
 ```bash
 $ rails g controller Todos
 $ rails g controller Items
+$ rails g controller Authentication
+$ rails g controller Users
 ```
 
 ## Testing
