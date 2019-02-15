@@ -61,7 +61,9 @@ $ rake db:create
 ```bash
 $ rails g model Todo title:string created_by:string
 $ rails g model Item name:string done:boolean todo:references
+$ rails g model User name:string email:string password_digest:string
 $ rake db:migrate
+$ rails db:test:prepare
 ```
 
 ## Controllers
